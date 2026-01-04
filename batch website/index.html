@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semester 2 - Chem Eng Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif; }
+
+body {
+  background: linear-gradient(135deg,#0d1b2a,#1b263b);
+  color:#fff;
+  line-height:1.6;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* Floating molecules/flasks */
+.molecule {
+  position:absolute;
+  width:30px;
+  height:30px;
+  opacity:0.15;
+  pointer-events:none;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  100% { transform: translateY(-900px) translateX(200px) rotate(360deg); }
+}
+
+header {
+  text-align:center;
+  padding:4rem 1rem 3rem 1rem;
+  color:#ffd700;
+  z-index:1;
+  position:relative;
+}
+
+header h1 { font-size:2.4rem; font-weight:700; margin-bottom:0.5rem; text-shadow:2px 2px 4px #000; }
+header p { font-size:1rem; font-weight:400; color:#ffd700; }
+
+main { max-width:1200px; margin:3rem auto; padding:0 1rem; position:relative; z-index:1; }
+
+section h2 {
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:2rem;
+  color:#ffd700;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;
+  margin-bottom:3rem;
+}
+
+.card {
+  background: linear-gradient(145deg,#1b263b,#0d1b2a);
+  border-radius:20px;
+  padding:2rem 1.5rem;
+  box-shadow:0 12px 25px rgba(0,0,0,0.5);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px) rotateX(2deg) rotateY(2deg);
+  box-shadow:0 20px 40px rgba(0,0,0,0.7);
+}
+
+.card h3 {
+  font-size:1.5rem;
+  margin-bottom:1.5rem;
+  color:#ffd700;
+  font-weight:700;
+}
+
+.card a {
+  display:block;
+  margin:0.7rem 0;
+  padding:0.6rem 0;
+  background:#ffd700;
+  color:#0d1b2a;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:all 0.3s ease;
+}
+
+.card a:hover {
+  background:#ffec8b;
+  transform: scale(1.05);
+}
+
+.card svg {
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:40px;
+  height:40px;
+  opacity:0.2;
+  transition: transform 0.4s ease;
+}
+
+.card:hover svg { transform:rotate(15deg) scale(1.1); }
+
+footer {
+  text-align:center;
+  padding:2rem;
+  background:#0d1b2a;
+  color:#ffd700;
+  font-weight:500;
+  box-shadow:0 -4px 15px rgba(0,0,0,0.5);
+  position:relative;
+  z-index:1;
+}
+
+@media(max-width:600px){
+  section h2 { font-size:1.6rem; }
+  .card h3 { font-size:1.3rem; }
+  .card svg { width:30px; height:30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Floating molecules/flasks -->
+<svg class="molecule" style="top:100px; left:50px; animation-duration:25s;"><circle cx="15" cy="15" r="12" stroke="#ffd700" stroke-width="2" fill="none"/></svg>
+<svg class="molecule" style="top:300px; left:200px; animation-duration:30s;"><circle cx="15" cy="15" r="12" stroke="#ffd700" stroke-width="2" fill="none"/></svg>
+<svg class="molecule" style="top:600px; left:100px; animation-duration:35s;"><circle cx="15" cy="15" r="12" stroke="#ffd700" stroke-width="2" fill="none"/></svg>
+<svg class="molecule" style="top:800px; left:400px; animation-duration:40s;"><circle cx="15" cy="15" r="12" stroke="#ffd700" stroke-width="2" fill="none"/></svg>
+
+<header>
+  <h1>Semester 2 - First-Year Chemical Engineering</h1>
+  <p>Centralized Notes, PYQs, and Reference Books</p>
+</header>
+
+<main>
+<section class="subjects">
+  <h2>Subjects</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Mathematics 2</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#ffd700" stroke-width="3" fill="none"/><line x1="32" y1="4" x2="32" y2="60" stroke="#ffd700" stroke-width="3"/></svg>
+    </div>
+
+    <div class="card">
+      <h3>Physics</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#ffd700" stroke-width="3" fill="none"/><circle cx="32" cy="32" r="12" stroke="#ffd700" stroke-width="2" fill="none"/></svg>
+    </div>
+
+    <div class="card">
+      <h3>Engineering Mechanics</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><rect x="16" y="16" width="32" height="32" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
+    </div>
+
+    <div class="card">
+      <h3>ECC</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#ffd700" stroke-width="3" fill="none"/><line x1="16" y1="32" x2="48" y2="32" stroke="#ffd700" stroke-width="3"/></svg>
+    </div>
+
+    <div class="card">
+      <h3>Introduction to Chemical Engineering</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><path d="M20 50 L44 50 L32 10 Z" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
+    </div>
+
+    <div class="card">
+      <h3>ES</h3>
+      <a href="#">Notes</a>
+      <a href="#">PYQs</a>
+      <a href="#">Reference Books</a>
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
+    </div>
+
+  </div>
+</section>
+
+<section class="labs">
+<h2>Labs</h2>
+<div class="cards">
+
+  <div class="card">
+    <h3>Physics Lab</h3>
+    <a href="#">Lab Manual</a>
+    <a href="#">Experiment Instructions</a>
+    <a href="#">Reference</a>
+    <svg viewBox="0 0 64 64"><path d="M32 2 L42 62 H22 Z" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
+  </div>
+
+  <div class="card">
+    <h3>Chemistry Lab</h3>
+    <a href="#">Lab Manual</a>
+    <a href="#">Experiment Instructions</a>
+    <a href="#">Reference</a>
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
+  </div>
+
+</div>
+</section>
+</main>
+
+<footer>
+&copy; 2026 First-Year Chem Eng Hub
+</footer>
+</body>
+</html>
